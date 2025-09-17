@@ -5,29 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70a8a13c-ab59-4377-9c96-7a9f36bba23d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RilLib/Control/Feedforward/ArmFeedforward.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RilLib/Control/Feedforward/ElevatorFeedforward.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RilLib/Control/Feedforward/SimpleMotorFeedforward.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RilLib/Control/PID/PIDController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RilLib/Control/PID/ProfiledPIDController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RilLib/Control/TrapezoidProfile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RilLib/Math/ChassisSpeeds.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RilLib/Math/Geometry/Pose2d.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RilLib/Math/Geometry/Rotation2d.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RilLib/Math/Geometry/Transform2d.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RilLib/Math/Geometry/Translation2d.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RilLib/Math/Geometry/Twist2d.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RilLib/Math/Interpolation/Interpolatable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RilLib/Math/Interpolation/InterpolatingDoubleTreeMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RilLib/Math/Interpolation/InterpolatingTreeMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RilLib/Math/Interpolation/Interpolator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RilLib/Math/Interpolation/InverseInterpolator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RilLib/Math/Interpolation/TimeInterpolatableBuffer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RilLib/Math/MathUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RilLib/Math/Units.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RilLib/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,9 +28,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2vhZOQ8kpcxvgPo0BhJCwir4zO9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -60,21 +39,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/chris/IdeaProjects/RilLib/src/main/java/RilLib/Main.java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/chris/IdeaProjects/RilLib/src/main/java/RilLib/Main.java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -91,7 +70,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1744599235216</updated>
-      <workItem from="1744599236291" duration="8879000" />
+      <workItem from="1744599236291" duration="10155000" />
+      <workItem from="1744765830790" duration="47000" />
+      <workItem from="1758122181305" duration="9000" />
     </task>
     <servers />
   </component>
