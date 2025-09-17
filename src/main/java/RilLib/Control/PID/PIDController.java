@@ -211,26 +211,6 @@ public class PIDController {
     }
 
     /**
-     * Returns the position tolerance of this controller.
-     *
-     * @return the position tolerance of the controller.
-     * @deprecated Use getErrorTolerance() instead.
-     */
-    public double getPositionTolerance() {
-        return m_errorTolerance;
-    }
-
-    /**
-     * Returns the velocity tolerance of this controller.
-     *
-     * @return the velocity tolerance of the controller.
-     * @deprecated Use getErrorDerivativeTolerance() instead.
-     */
-    public double getVelocityTolerance() {
-        return m_errorDerivativeTolerance;
-    }
-
-    /**
      * Returns the error tolerance of this controller. Defaults to 0.05.
      *
      * @return the error tolerance of the controller.
@@ -361,26 +341,6 @@ public class PIDController {
     public void setTolerance(double errorTolerance, double errorDerivativeTolerance) {
         m_errorTolerance = errorTolerance;
         m_errorDerivativeTolerance = errorDerivativeTolerance;
-    }
-
-    /**
-     * Returns the difference between the setpoint and the measurement.
-     *
-     * @return The error.
-     * @deprecated Use getError() instead.
-     */
-    public double getPositionError() {
-        return m_error;
-    }
-
-    /**
-     * Returns the velocity error.
-     *
-     * @return The velocity error.
-     * @deprecated Use getErrorDerivative() instead.
-     */
-    public double getVelocityError() {
-        return m_errorDerivative;
     }
 
     /**

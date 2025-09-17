@@ -4,18 +4,12 @@ plugins {
 }
 
 group = 'com.github.ChristianBrock3434'
+// artifact = 'RilLib'
 version = '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
-
-    dependencyResolutionManagement {
-	    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-	    repositories {
-	    	mavenCentral()
-	    	maven { url 'https://jitpack.io' }
-	    }
-    }
+    maven { url "https://jitpack.io"  }
 }
 
 
@@ -24,20 +18,7 @@ dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 
-    implementation 'com.github.User:Repo:Tag'
-}
-
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                from components.release
-                groupId = group
-                artifactId = 'RilLib'
-                version = version
-            }
-        }
-    }
+    implementation 'com.github.ChristianBrock3434:RilLib:1.0-SNAPSHOT'
 }
 
 test {
