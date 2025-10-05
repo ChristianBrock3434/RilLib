@@ -2,9 +2,9 @@
 // Open Source Software; you can modify and/or share it under the terms of
 // the WPILib BSD license file in the root directory of this project.
 
-package RilLib.Math.Interpolation;
+package org.RilLib.Math.Interpolation;
 
-import RilLib.Math.MathUtil;
+import org.RilLib.Math.MathUtil;
 
 /**
  * An interpolation function that returns a value interpolated between an upper and lower bound.

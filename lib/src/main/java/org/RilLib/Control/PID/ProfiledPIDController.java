@@ -2,17 +2,16 @@
 // Open Source Software; you can modify and/or share it under the terms of
 // the WPILib BSD license file in the root directory of this project.
 
-package RilLib.Control.PID;
+package org.RilLib.Control.PID;
 
-import RilLib.Control.TrapezoidProfile;
-import RilLib.Math.MathUtil;
+import org.RilLib.Control.TrapezoidProfile;
+import org.RilLib.Math.MathUtil;
 
 /**
  * Implements a PID control loop whose setpoint is constrained by a trapezoid profile. Users should
  * call reset() when they first start running the controller to avoid unwanted behavior.
  */
 public class ProfiledPIDController {
-    private static int instances;
 
     private PIDController m_controller;
     private double m_minimumInput;
@@ -58,7 +57,6 @@ public class ProfiledPIDController {
         m_controller = new PIDController(Kp, Ki, Kd, period);
         m_constraints = constraints;
         m_profile = new TrapezoidProfile(m_constraints);
-        instances++;
     }
 
     /**

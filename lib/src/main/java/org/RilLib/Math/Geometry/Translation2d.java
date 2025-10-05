@@ -2,10 +2,10 @@
 // Open Source Software; you can modify and/or share it under the terms of
 // the WPILib BSD license file in the root directory of this project.
 
-package RilLib.Math.Geometry;
+package org.RilLib.Math.Geometry;
 
-import RilLib.Math.Interpolation.Interpolatable;
-import RilLib.Math.MathUtil;
+import org.RilLib.Math.Interpolation.Interpolatable;
+import org.RilLib.Math.MathUtil;
 
 import java.util.Collections;
 import java.util.Comparator;

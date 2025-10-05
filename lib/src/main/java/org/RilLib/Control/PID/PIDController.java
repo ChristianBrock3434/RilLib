@@ -2,13 +2,12 @@
 // Open Source Software; you can modify and/or share it under the terms of
 // the WPILib BSD license file in the root directory of this project.
 
-package RilLib.Control.PID;
+package org.RilLib.Control.PID;
 
-import RilLib.Math.MathUtil;
+import org.RilLib.Math.MathUtil;
 
 /** Implements a PID control loop. */
 public class PIDController {
-    private static int instances;
 
     // Factor for "proportional" control
     private double m_kp;
@@ -102,8 +101,6 @@ public class PIDController {
             throw new IllegalArgumentException("Controller period must be a positive number!");
         }
         m_period = period;
-
-        instances++;
     }
 
     /**
