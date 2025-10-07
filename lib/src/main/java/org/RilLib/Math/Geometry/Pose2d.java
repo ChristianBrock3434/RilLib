@@ -5,6 +5,9 @@
 package org.RilLib.Math.Geometry;
 
 import org.RilLib.Math.Interpolation.Interpolatable;
+import org.RilLib.Math.MatBuilder;
+import org.RilLib.Math.Matrix;
+import org.RilLib.Math.Numbers.N3;
 
 import java.util.Collections;
 import java.util.Comparator;
@@ -56,6 +59,20 @@ public class Pose2d implements Interpolatable<Pose2d> {
     public Pose2d(double x, double y, Rotation2d rotation) {
         m_translation = new Translation2d(x, y);
         m_rotation = rotation;
+    }
+
+    /**
+     * Constructs a pose with the specified affine transformation matrix.
+     *
+     * @param matrix The affine transformation matrix.
+     * @throws IllegalArgumentException if the affine transformation matrix is invalid.
+     */
+    public Pose2d(Matrix<N3, N3> matrix) {
+        m_translation = new Translation2d(matrix.get(0, 2), matrix.get(1, 2));
+        m_rotation = new Rotation2d(matrix.block(2, 2, 0, 0));
+        if (matrix.get(2, 0) != 0.0 || matrix.get(2, 1) != 0.0 || matrix.get(2, 2) != 1.0) {
+            throw new IllegalArgumentException("Affine transformation matrix is invalid");
+        }
     }
 
     /**
@@ -263,6 +280,28 @@ public class Pose2d implements Interpolatable<Pose2d> {
                         .times(Math.hypot(halfThetaByTanOfHalfDtheta, halfDtheta));
 
         return new Twist2d(translationPart.getX(), translationPart.getY(), dtheta);
+    }
+
+    /**
+     * Returns an affine transformation matrix representation of this pose.
+     *
+     * @return An affine transformation matrix representation of this pose.
+     */
+    public Matrix<N3, N3> toMatrix() {
+        var vec = m_translation.toVector();
+        var mat = m_rotation.toMatrix();
+        return MatBuilder.fill(
+                N3.instance,
+                N3.instance,
+                mat.get(0, 0),
+                mat.get(0, 1),
+                vec.get(0),
+                mat.get(1, 0),
+                mat.get(1, 1),
+                vec.get(1),
+                0.0,
+                0.0,
+                1.0);
     }
 
     /**

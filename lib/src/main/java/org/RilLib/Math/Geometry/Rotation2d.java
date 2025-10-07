@@ -4,9 +4,10 @@
 
 package org.RilLib.Math.Geometry;
 
+import org.RilLib.Math.*;
 import org.RilLib.Math.Interpolation.Interpolatable;
-import org.RilLib.Math.MathUtil;
-import org.RilLib.Math.Units;
+import org.RilLib.Math.Numbers.N2;
+
 import java.util.Objects;
 
 /**
@@ -106,6 +107,38 @@ public class Rotation2d
         }
         m_value = Math.atan2(m_sin, m_cos);
     }
+
+    /**
+     * Constructs a Rotation2d from a rotation matrix.
+     *
+     * @param rotationMatrix The rotation matrix.
+     * @throws IllegalArgumentException if the rotation matrix isn't special orthogonal.
+     */
+    public Rotation2d(Matrix<N2, N2> rotationMatrix) {
+        final var R = rotationMatrix;
+
+        // Require that the rotation matrix is special orthogonal. This is true if
+        // the matrix is orthogonal (RRᵀ = I) and normalized (determinant is 1).
+        if (R.times(R.transpose()).minus(Matrix.eye((Nat<N2>) N2.instance)).normF() > 1e-9) {
+            var msg = "Rotation matrix isn't orthogonal\n\nR =\n" + R.getStorage().toString() + '\n';
+            throw new IllegalArgumentException(msg);
+        }
+        if (Math.abs(R.det() - 1.0) > 1e-9) {
+            var msg =
+                    "Rotation matrix is orthogonal but not special orthogonal\n\nR =\n"
+                            + R.getStorage().toString()
+                            + '\n';
+            throw new IllegalArgumentException(msg);
+        }
+
+        // R = [cosθ  −sinθ]
+        //     [sinθ   cosθ]
+        m_cos = R.get(0, 0);
+        m_sin = R.get(1, 0);
+
+        m_value = Math.atan2(m_sin, m_cos);
+    }
+
 
     /**
      * Constructs and returns a Rotation2d with the given radian value.
@@ -213,10 +246,21 @@ public class Rotation2d
     }
 
     /**
+     * Returns matrix representation of this rotation.
+     *
+     * @return Matrix representation of this rotation.
+     */
+    public Matrix<N2, N2> toMatrix() {
+        // R = [cosθ  −sinθ]
+        //     [sinθ   cosθ]
+        return MatBuilder.fill(N2.instance, N2.instance, m_cos, -m_sin, m_sin, m_cos);
+    }
+
+    /**
      * Returns the radian value of the Rotation2d.
      *
      * @return The radian value of the Rotation2d.
-     * @see RilLib.Math.MathUtil#angleModulus(double) to constrain the angle within (-π, π]
+     * @see org.RilLib.Math.MathUtil#angleModulus(double) to constrain the angle within (-π, π]
      */
     public double getRadians() {
         return m_value;
@@ -226,7 +270,7 @@ public class Rotation2d
      * Returns the degree value of the Rotation2d.
      *
      * @return The degree value of the Rotation2d.
-     * @see RilLib.Math.MathUtil#inputModulus(double, double, double) to constrain the angle
+     * @see org.RilLib.Math.MathUtil#inputModulus(double, double, double) to constrain the angle
      *     within (-180, 180]
      */
     public double getDegrees() {
