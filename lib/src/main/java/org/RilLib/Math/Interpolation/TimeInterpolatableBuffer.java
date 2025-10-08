@@ -135,6 +135,13 @@ public final class TimeInterpolatableBuffer<T> {
         }
     }
 
+    public Optional<T> getLatest() {
+        if (m_pastSnapshots.isEmpty()) {
+            return Optional.empty();
+        }
+        return Optional.of(m_pastSnapshots.lastEntry().getValue());
+    }
+
     /**
      * Grant access to the internal sample buffer. Used in Pose Estimation to replay odometry inputs
      * stored within this buffer.
