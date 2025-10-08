@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f3d3a4a-fad0-4008-a1cd-517724c15474" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/src/main/java/org/RilLib/Math/ComputerVisionUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/main/java/org/RilLib/Math/PoseEstimator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/main/java/org/RilLib/SlewRateLimiter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/bin/main/org/RilLib/Math/Interpolation/TimeInterpolatableBuffer.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bin/main/org/RilLib/Math/Interpolation/TimeInterpolatableBuffer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main/java/org/RilLib/Math/Interpolation/TimeInterpolatableBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/org/RilLib/Math/Interpolation/TimeInterpolatableBuffer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
